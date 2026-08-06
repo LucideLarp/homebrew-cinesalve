@@ -12,15 +12,17 @@ cask "cinesalve" do
   app "Cinesalve.app"
 
   caveats <<~EOS
-    Cinesalve is not yet signed with an Apple Developer ID, so macOS quarantines
-    it. Install with --no-quarantine to skip the Privacy & Security step:
-
-      brew install --cask --no-quarantine lucidelarp/cinesalve/cinesalve
-
-    If you already installed it without that flag, either allow it once in
-    System Settings > Privacy & Security > Open Anyway, or run:
+    Cinesalve is not yet signed with an Apple Developer ID, and Homebrew
+    quarantines what it installs, so macOS will refuse the first launch. Clear it
+    once with:
 
       xattr -dr com.apple.quarantine /Applications/Cinesalve.app
+
+    Or open it, let it be refused, then allow it in
+    System Settings > Privacy & Security > Open Anyway.
+
+    (Verified on macOS 26: current Homebrew has no --no-quarantine option, and
+    without clearing the attribute the app is killed on launch.)
   EOS
 
   zap trash: "~/Library/Preferences/com.cinesalve.app.plist"

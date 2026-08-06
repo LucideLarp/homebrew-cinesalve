@@ -5,12 +5,17 @@ pulled card, a crash. The footage is on the card, only the index is missing, and
 this rebuilds it.
 
 ```sh
-brew install --cask --no-quarantine lucidelarp/cinesalve/cinesalve
+brew install --cask lucidelarp/cinesalve/cinesalve
+xattr -dr com.apple.quarantine /Applications/Cinesalve.app
 ```
 
-`--no-quarantine` is there because the app is not yet signed with an Apple
-Developer ID. Without it, macOS blocks the first launch and you have to allow it
-in System Settings > Privacy & Security.
+The second line is needed because the app is not yet signed with an Apple
+Developer ID and Homebrew quarantines what it installs, so macOS kills the first
+launch. Current Homebrew has no `--no-quarantine` option. If you would rather not
+run it, open the app, let macOS refuse it, then allow it in
+System Settings > Privacy & Security > Open Anyway.
+
+The tap is still worth it for upgrades: `brew upgrade` keeps you current.
 
 Free to run and to watch the recovered footage. A licence is only needed to save
 the repaired file.
