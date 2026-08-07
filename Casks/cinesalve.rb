@@ -1,6 +1,6 @@
 cask "cinesalve" do
-  version "1.8"
-  sha256 "4f53b534cb41341302ad4f1a9f93522e0a6d9fe06cec588b075e38b3264d478c"
+  version "1.9"
+  sha256 "98757a5562832f6a7288c1f54f03dccb4bc5fa086148a6d6c6f0b5d2b16e888d"
 
   url "https://github.com/LucideLarp/cinesalve/releases/download/v#{version}/Cinesalve-#{version}.zip"
   name "Cinesalve"
