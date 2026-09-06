@@ -17,8 +17,10 @@ System Settings > Privacy & Security > Open Anyway.
 
 The tap is still worth it for upgrades: `brew upgrade` keeps you current.
 
-Free to run and to watch the recovered footage. A licence is only needed to save
-the repaired file.
+$69 once, for every Mac you own. Before buying, the free checker at
+<https://cinesalve.honorboxx.workers.dev/check> reads your damaged file in the
+browser and reports exactly how many frames are recoverable, so nobody pays to
+find out whether their footage survived.
 
 - Source of truth and downloads: <https://github.com/LucideLarp/cinesalve>
 - What it is: <https://cinesalve.honorboxx.workers.dev>
